@@ -1,0 +1,504 @@
+/* h1{
+    color:green;          evern after applying external stylesheet parameters, if we give inline parameters then inline will always have the priority.
+}
+
+p{
+    color:rgba(0, 128, 0, 0.696);
+}
+
+button{
+    color:brown;
+    background-color: green;
+}
+*/
+/*there are two color systems: 1:rgb system, 2:hex or hexadecimal system
+1.rgb system*
+body{
+    background-color:rgb(200,200,200);       
+}
+2.hex system  , in this system we use hexadecimal which goes from 0 to 9 and then A to F where A is 10 and F is 15, so 00 is lowest and ff is highest(we always use # before the code)*/
+/* body {
+  background-color: brown;
+} */
+/* there are many types of selectors: 1:Universal selector, 2:element selector, 3: id selector, 4: class selector
+1. univsersal selector: this selector would apply globally and will apply on everything(not background color though.
+*{
+    color:pink
+}
+    h1{
+        color:green;        in css the parameters applied later will always have higher priority than those applied before, in this case as well,this parameter is applied after universal selector , hence this will have more priority than universal.
+    }  
+2.element selector is just done as we saw before by simply using tags like h1{}
+3.Id selector: done by selecting the id ,alloted in the index.html file.
+#headingOne {
+  color: yellow;
+}
+#headingTwo {
+  color: chocolate;
+}
+#headingThree{
+    color:magenta;
+}
+4Class selector: we can use it to apply parameters on multiple elements simultaneously.since using same id(3rd point) more than once is not a good practice. 
+.myClass{
+    color:red;
+}*/
+/*Practice-set 1:
+question 1:create a div with id=box and set background color to blue 
+#box{
+    background-color: blue;
+}
+question 2:creating button and giving it color basically
+button{
+    background-color:red;
+}
+*/
+/* p{
+    text-align:left;            we can align in left,right or center. 
+    text-align:start;           and start is left and end is right.
+}
+h1{
+    text-align:center;             and text-align always works with respect to the parent tag, like in this case h1 will be in center with respect to body, because body tag is its parent tag.
+    text-decoration: blue underline;     by text decoration we can use underline,overline and line-through and none. 
+}
+#h1 {
+  font-weight: lighter;            we can set font-weight to like normal,bold,bolder,lighter etc.the value of lightest weight is 100 and boldest is 900 , so this ranges from 100-900, and the bold sits at 400
+  font-weight: 800;
+}
+#one{
+    font-family: arial;
+}
+#two{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     we can also use multiple font family because if one browser doesn't support one family then it can use another.
+}
+#one{
+    font-size:25px;     font-size is well.. for size of font.
+}
+#two{
+    font-size:15px;
+}
+#one{
+    line-height:20px;       line-height tells the height alloted a particular line.
+    text-transform:uppercase;     by text-transform , we can do uppercase,lowercase,capitalize or none etc.
+}
+
+Next topic is box model, which contains:
+1.height 2.width 3.border 4.padding 5.margin   
+*/
+/*
+div{
+    background-color:pink;
+    text-align: center;     as said earlier this will put the text in center w.r.t the height and width provided to the div, and not in the center of whole page. 
+    height:100px;
+
+    width:100px;
+*/
+/* border-width: 5px;
+    border-style:solid;
+    border-color: brown;
+these three lines can be written in one line as well:
+    border:2px solid brown;
+    border-radius: 20px;        we use border radius for making the corners of the box round.*/
+/*  we can also write it in percentage:
+    border-radius:50% */
+
+/* padding:25px;      when we directly write just padding, then we are applying same in all four sides , in this case 25px.
+    padding-left:25px;    we can also do it this way
+    padding-right:25px;
+    padding-top:25px;
+    padding-bottom: 25px;
+    but we can write these four lines in one line like this: 
+    padding: 1px 2px 3px 4px;      and in this way we always go clockwise direction, that means 1px is for top, 2px for right side, 3px for bottom and 4px for left side.*/
+
+/* margin-top : 50px;
+    margin-bottom: 50px;
+    /*and same way like padding we can write
+    margin:50px;   for applying on all fours 
+    margin: 10px 20px 30px 40px;  and this also - top,right,bottom,left */
+
+/* tried making a traffic light signal:
+    #one{                          this is the main box
+        height:450px;
+        width: 150px;
+        background-color:black;
+        padding: 20px 20px 20px 35px;
+
+    }
+    #two{                           first circle
+        height:100px;
+        width: 100px;
+        background-color:lightgreen;
+        border-radius: 50%;
+        padding: 15px 15px 15px 15px;       padding in circles is not really necessary but it made the circles look bigger a lil ig.
+        margin-bottom: 25px;
+    }
+    #three{                             second circle
+        height:100px;
+        width:100px;
+        background-color: yellow;
+        border-radius:50%;
+        padding: 15px 15px 15px 15px;
+        margin-bottom:25px;
+    }
+    #four{                               third circle
+        height:100px;
+        width:100px;
+        background-color: red;
+        border-radius:50%;
+        padding: 15px 15px 15px 15px;
+        margin-bottom:25px;
+    } */
+
+/*Now creating a navbar just like in amazon.com:
+
+* {
+  padding: 0;      universally applying padding and margin as 0 since "apparently" it makes the process a little easier
+  margin: 0;
+  color:white;
+}
+#navbar {
+  height: 60px;
+  background-color: #0f1111;
+}
+    
+button {
+  background-color: #f08804;
+}
+
+#logo {
+  color: #f08804;
+  font-size: 25px;
+}
+a{
+    margin-right:200px;
+}
+*/
+
+/* Next topic is Display Property: there are four types: 1.inline 2.block 3.inline-block 4.none
+inline occupies only the spaces required so that it can function properly but on the other hand block occupies the whole width even if it doesn't need it.
+but we can allot these parameters to these for ex making block to inline or vice versa*/
+/* div {
+  background-color: pink;
+  display: inline; /* this is the line we are talking about. by doing this we made div inline, by default it is block(but the problem with inline is that we won't be able to apply top and bottom margin, that means only left and right margin will be applied. and thats where 'inline-block' property comes in)
+}
+  button{
+  display:block;
+}
+displaying inline-block:
+display:inline-block;       yea that's it..
+and 
+display:none           this one literally makes things disappear
+one more property does the same thing called as 'visibility:hidden;' but the difference between the two is that 
+in display:none the thing is completely gone and the space allocated for it is gone too but
+in visibility:hidden , we just won't be able to see it but the space will be still there , kinda like silhouette , i mean the space for the element is still there , but we just can't see it.  */
+
+/* Alpha Channel
+RGBA, here A is alpha channel
+div{
+    width:100px;
+    height:100px;
+    margin:25px;
+    padding:25px;
+    display:inline-block;
+    background-color: rgba(255,0,0,0.5)       so here the last parameter is alpha channel which decides opacity(basically 0 means no color and 1 means full color and 0.5 is like slighly dim)
+}   */
+
+/*Units in CSS(absolute and relative. we have been studying absolute units this whole time , so its time for relative)
+relative contains three units: 1.percentage 2.em 3.rem 
+1.percentage:
+#box1{
+    height:100px;
+    width:100px;
+    background-color: green;
+}
+#box2{
+    height:50px;
+    width: 30%;                  as well can see we used % here instead of px which is absolute but % is relative, which means box2 will get only 30% width RELATIVE TO BOX1, so if we fk around with box1 width then the width of box2 will also keep changing automatically(basically because box1 is parent of box2)
+    margin-left:10%
+    background-color: yellow;      
+}*/
+/* 2.em:(basically it is related to font-size relative to the parent (ofc))  
+#box1{
+    height:100px;
+    width:200px;
+    background-color: green;
+    font-size:10px;
+}
+#box2{
+    height:50px;
+    width: 30%;
+    margin-left:10%;
+    background-color: yellow;
+    font-size: 2em;        so this basically means two times the parent font-size which is box1 in this case.it could be half of basically anything.
+    width:5em;             and in this line the width will be 5 times of the font-size of the element itself not the parent, i mean like, see, in this example box1 is 10px and box2 is 2em so that becomes 20px , and then we do 5em for width, that means the width now is 5 times 20 which is 100px, not 5 times 10(and ya 5 times 10 seems obvious cause its relative to the parent but in this case it is not)
+} */
+/* Root Em( basically it is also related to font-size but this time it is relative to the root element and not to the parent  
+font-size:5rem;         by default the text is written in 16px in html on webpage so that makes this font-size 80px.*/
+/* two more properties are vh(viewport height) and vw(viewport width) and these both are relative to the whole width and height of the browser(cause every laptop got difference height and width) */
+
+/*Position (basically it is used for when you want to place your elements or whatever in correct place relative to the whole document          */
+/* div{
+    width:100px;
+    height:100px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    display:inline-block; 
+} */
+
+/* #box1{
+    position:static;
+    top:50px;
+    bottom:50px;      in this scenario top and bottom(or anything for that matter) won't work because we have already given position as static, and static is also the default option for positioning.     
+} */
+/* #box2{
+    position:relative;     this means element is relative to itself
+    top:20px;
+    left:10px;              here ofc everything is gonna work cause its not static.
+} */
+/* #box3{
+    position:absolute;      in absolute the position is set relative to the element's closest positioned ancestor.(and positioned means that it can not be static, cause well they are not actually positioned , they are just default so ya)
+    top:10px;
+    left:20px;
+} */
+/* #box4{
+    position:fixed;     in fixed , elemetnts are positioned relative to the browser.(ya that's it)
+    top:0px;
+    left:0px;
+ }
+ #box3{
+    position:sticky;      position based on user's scroll (sticky is triggered when we can actually see the element on the webpage, after that it will stick along as we go further down.
+    top:0px;
+ } */
+
+/* z-index: it decides the stack level of elements (basically who will overlap who)
+by default which element comes later will overlap the earlier one , but we can also control all this by using z-index
+by default z-index of every element is 0. And if we give positive values like 1,2,.. and so on then they will have priority and they will overlap other elements who have 0 or negative z-index values.
+
+#box2{
+    position:relative;
+    left:20px;
+    top:20px;
+}
+#box3{
+    position:relative;
+    z-index:-1;             so in this scenario box3 should be above box2 in bottomleft corner because we gave parameters to box3 later compared to box2 , so it will obviously overlap box2, but if we want box2 to be on top of box3 then we can use a negative z-index as written here. or use a positive z-index for box2 , both do the same task.
+}                                   z-index could be 1,2,... or -1,-2... whatever..      */
+
+/*Next topic:background images and background-size */
+
+/* #box1{
+    background-image: url(nature.jpg);
+    but this property alone is not enough to set background images cause the image looks very enlarged or very small so we use background-size as well. and we can set it to 1.cover 2.contain 3.auto ( but we are gonna use cover most of the time)
+    background-size:cover;            covers the whole space
+    background-size: contain;         also covers the whole space but it reduces the size so much that we can see the image more than just once (but if we want to stop this repeatition we can use - 'background-repeat:no-repeat';
+    background-size: auto;             so last one is auto and this is just the default one, whatever part of image is being shown on the webpage is its own doing(can't be helped)
+} */
+
+/* Next topic is Flexbox: it is basically a one dimensional layout method for arranging items in rows or columns*/
+/* body{
+    text-align: center;
+}
+div{
+    height:100px;
+    width:200px;
+    display:inline-block;
+    border:2px solid black;
+}
+#container{
+    width:600px;
+    height:300px;
+    display:flex; */
+/* first one is flex-direction: */
+/*flex-direction:row;         this is the default one in flexbox, it just means the elements will be ordered from left to right.
+    /* flex-direction:row-reverse;     in row-reverse , all elements will be positioned from right to left.   */
+/* flex-direction:column;             in column, all elements will be positioned from top to bottom (and one more thing about flexbox is that all the flex items will always try to be inside the flex container even if they have to reduce their size to fit in(well at least as long as the inside content allows) */
+/* flex-direction:column-reverse;           in column-reverse , all items will be positioned from bottom to top */
+/* in case of row and row-reverse,the 'main axis' is horizontal and hence the 'cross axis' is vertical and vice versa in case of column and column-reverse */
+
+/* next is justify-content: this is used for positioning of items(it may sound like flex-direction at first, but it is not. the main difference would be that in flex direction the order of the items completely get reversed when we go to lets say row-reverse from row, but in justify-content, the order doesn't change. just items move a little without changing the order*/
+/* justify-content: flex-start;          this is the default one,and just puts the items to starting of the main axis, which is the leftmost direction in this case because main axis is horizontal axis in this case because flex-direction is set to row. */
+/* justify-content:flex-end;             in flex-end all the items will be moved to the end of main axis which means to the very right side of the container in this case */
+/*justify-content: center;              all items in the center of container
+    /* justify-content: space-around;        items use all the space around them(one thing to notice is that the space between the items will be double relative to the space between the leftmost item and container as well as the space between the rightmost item and container */
+/* justify-content: space-between;       all space is between items and no space is alloted between leftmost item and containre or rightmost item and container */
+/* justify-content: space-evenly;        all space is evenly spread, then whether its between the items or the between items and container    */
+/* all these properties can be applied when the flex-direction is set to column too(i mean ofc) */
+/* flex-wrap:wrap;                generally preferred while doing align-content*/
+/* align-items:flex-start;      align-items and ailgn-content are related to the 'cross axis'(in this case cross axis is vertical) */
+/* align-content:flex-start;    and align-items will align the items as mentioned whether it is flex-start,flex-end,center or whatever,but we need align-content as well because it can remove the space created by align-items and put all the content to wherever decided(in this case flex-start) */
+/*(talking just for flex-start)so basically align-items here will put all the items to the very top so that they look aligned(it will not include all the items i mean like it will stop as soon as some of them reach top and are aligned) whereas align-content here will put all the content available to top(it will include all the content and will move everything to top though the order wouldn't change obviously)
+}*/
+
+/* #box1{
+    background-color: aqua;
+    /* align-self:flex-end;          align-self is used for alignment of individual items along the cross axis and align-self has higher priority than the alignments defined in the container
+}
+#box2{
+    background-color: pink;
+    height:200px;
+    flex-shrink:2;             /*flex-shrink is used when we want to explicitly state the rate at which a particular item would shrink its width if all our items are shrinking because of space variations in containre or anything for that matter.(so that means here box2 would shrink with twice the speed as compared to other four boxes.by default the value of flex-shrink is 1 by the way
+    /* flex-shrink:0;            used when we don't want the width of a particular item to shrink no matter the size variations of container.*/
+/* flex-grow:1;              similar property as flex-shrink, the difference is that flex-grow is used when we want our items to occupy the extra space, if available, and then we can explicitly give them values(basically at which rate they will grow compared to other items. 
+}
+#box3{
+    background-color: darkkhaki;
+    height:75px;
+    /* flex-grow:2;                so here if we got extra space then box3 will grow at twice the rate compared to box2 
+}
+#box4{
+    background-color: indianred;
+}
+#box5{
+    background-color: slateblue;
+} */
+
+/* *{
+    margin:0;
+} */
+
+/* How to center a div lol
+first create two divs and give them class names outer and inner and then this(literally just three lines):
+.outer {
+    height:400px;
+    width:400px;
+    background-color: cornflowerblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    height:100px;
+    width:100px;
+    background-color:darkorchid;
+} */
+
+/* Next topic: Media Queries:it is used for making responsive webpages, what i mean by that is all the webpages will look different when we see them on different devices, so media queries are used to manage that. */
+
+/* div{
+    background-color: red;
+    width:100px;
+    height:100px;
+} */
+/* @media (width:600px) {            /*if the width of the webpage is 600px then the color will turn blue from red
+    div{
+        background-color: blue;
+    }
+} */
+/* but since we can't allot these parameters for every single width or height or anything for that matter, we can also use shit like min-width(which will apply on all the width size greater than what we mention) or max-width(which will apply to all the width smaller than what is mentioned)*/
+/* @media(min-width:500px){
+    div{
+        background-color: aquamarine;
+    }
+}
+/* or even better use both min-width and max-width:
+@media(min-width: 200px) and (max-width:300px){
+    div{
+        background-color: brown;
+    }
+} */
+
+/*Next topic: Advance CSS: */
+/*div{
+    height:100px;
+    width:100px;
+    background-color:aquamarine;
+    border:2px solid black;
+    transition-property:all;
+    transition-duration:2s;                  /*the amount of time taken for effects to take place
+    /*transition-timing-function: steps(5);    it executes the given parameter in exact 5 steps and in two seconds(ofc for this specific scenario only)
+    transition-timing-function:ease-in;        /*so ya we could use steps,ease-in,ease-out,linear and god knows how many more.
+    transition-delay:1s;                        transition-delay and transition-duration might look same but are very different. see,transition-duration tells the time the transition is gonna take, on the other hand transition-delay shows the amount of time after which the transition will happen.(literally delay)*/
+/*we have shorthand for transition too (shorthand means writing all the shit in just one single line)*/
+/*transition: all 2s ease-in 1s;      and it goes like this , first of all transition-property name, then transition-duration then transition-timing-function and then transition-delay
+}*/
+
+/*Transform*/
+/*div{
+    position:absolute;
+    top:100px;
+    left:100px;
+    transform:rotate(45deg)         rotates by 45 degrees ( and the text inside div also rotates , not just the outer box)*/
+/* rotate: x 180deg;                  now it rotates wrt x axis(and we wont be able to see anything on screen if we rotate by 90 deg wrt x or y axis because it becomes invisible by hiding behind axis) */
+/*transform: scale(2);             used to increase or decrease the size(but if we want to increase the size in x axis and y axis differently then: */
+/* transform: scale(1,2);              so here first one(1) is x axis and second(2) is y axis. hence the item will scale double the amount across y axis compared to x axis( and it can be used in hover and active properties too, if fact all the transform properties can be used while hovering and active) */
+
+/*when we hover*/
+/*div:hover{
+    /* background-color: red;
+    color:white;
+    font-size:20px; */
+/* transform:rotate(90deg); */
+/* transform: scale(20);    */
+/* transform: translateX(200px);       by translate property we can make our item move in a particular direction, in this case it is explicity alloted X axis but by default also x axis is considered */
+/* transform: translateY(-300px);        in this case it will go in negative y direction */
+/*shorthand*/
+/* transform:translate(100px,100px);     it will start sliding towards south-east direction */
+/* transform: skew(45deg);                 skew kinda streches the item by picking its opposite corners 
+}*/
+
+/* when we click */
+/* div:active{
+    background-color: pink;
+} */
+
+/*div{
+    height:100px;
+    width:100px;
+    background-color:aquamarine;
+    border:2px solid black;
+    position:absolute;
+    top:100px;
+    left:100px;
+    /*we will use the template:
+    animation-name:Animate;
+    animation-duration:2s;            /*blinding disco lights yeaa baby
+    animation-timing-function: ease-in;
+    animation-delay:0s;
+    animation-iteration-count:infinite;     /* this is the number of times the animation will happen on our webpage , i mean setting it to infinite makes most sense to me */
+/*there is one more property known as animation-direction, and it got four types: 1.normal('from' to 'to') 2.reverse('to' to 'from') 3.alternate(first 'from' to 'to' and then 'to' to 'from') 4.alternate-reverse(first 'to' to 'from' and then 'from' to 'to')
+    animation-direction:normal; */
+/*we also got shorthand for this too: */
+/* animation:Animate 2s ease-in 0s infinite normal;     so first of all we got name then duration then timing function then delay then iteration count then direction.
+}*/
+
+/*Animation*/
+/* first we need to create a template that we will use later*/
+/*@keyframes Animate {
+    from { background-color:aquamarine;}
+    from{left:0px;}
+    to {background-color: red;}
+    to{left:200px;}
+} */
+/* we can also write 0% and 100& in place of 'from' and 'to' respectively, the advantage of doing that is that , then we will be able to also give parameters for lets say 30% or 50% or any percent which is in between 0% and 100% which won't be possible if we just simply write 'from' and 'to'*/
+/* 0%{
+    left:0px;
+    background-color: yellow;
+}
+50%{
+    background-color: blue;
+}
+100%{
+    left:200px;
+    background-color: red;
+} */
+
+/* designing a website loader */
+/* first creating a div and giving is class named loader */
+/* .loader {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 20px solid lightblue;
+  border-top: 20px solid yellow;
+  animation: spinanimate 1s ease-in-out 0s infinite normal;
+}
+
+@keyframes spinanimate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
